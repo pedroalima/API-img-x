@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+const main = require("./db.js")
+
+main()
 
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
