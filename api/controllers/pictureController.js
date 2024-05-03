@@ -1,3 +1,4 @@
+const storeFile = require("../config/db");
 const Picture = require("../models/Picture");
 const fs = require("fs");
 
@@ -17,6 +18,8 @@ exports.create = async (req, res) => {
     try {
         console.log(req.file);
         const file = req.file;
+
+        // storeFile(file.path)
 
         const picture = new Picture({
             name: file.originalname,
